@@ -33,8 +33,8 @@ Set<AssetId> _getImports(
 
   return imports
       .map(
-        (import) => AssetId.resolve(
-          import,
+        (url) => AssetId.resolve(
+          Uri.parse(url),
           from: from,
         ),
       )
